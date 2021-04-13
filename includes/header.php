@@ -24,6 +24,7 @@ if (isset($_SESSION['reg_no'])) {
   	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<link rel="stylesheet" href="assets/css/mystyle.css">
   	<link href="assets/fonts/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   	<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 
 

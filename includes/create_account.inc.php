@@ -19,7 +19,7 @@ if ( isset( $_POST['create_account_btn']) ) {
 		} else{
 
 			if ($password == $re_password) {
-				$result = queryMysql("INSERT INTO `users`(`reg_no`, `email`, `password`) VALUES ('$reg_no', '$email','$password')");
+				queryMysql("INSERT INTO `users`(`reg_no`, `email`, `password`) VALUES ('$reg_no', '$email','$password')");
 
 				$result = queryMysql("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
 				if ( $result -> num_rows ) {

@@ -41,11 +41,30 @@ function profileImage( $row_used ) {
 }
 
 function messageError($msg, $err){
-    if(!empty($err)) echo "<div class='alert alert-warning alert-dismissible mb-10' role='alert'><button type='button' class='close' data-dismiss='alert'>&times;</button>
-      <h5 class='alert-heading'>Error</h5>$err</div>";
+    // if(!empty($err)) echo "<div class='alert alert-warning alert-dismissible mb-10' role='alert'><button type='button' class='close' data-dismiss='alert'>&times;</button>
+    //   <h5 class='alert-heading'>Error</h5>$err</div>";
 
-    if(!empty($msg)) echo "<div class='alert alert-success alert-dismissible mb-10' role='alert'><button type='button' class='close' data-dismiss='alert'>&times;</button>
-      <h5 class='alert-heading'>Message</h5>$msg</div>";
+    // if(!empty($msg)) echo "<div class='alert alert-success alert-dismissible mb-10' role='alert'><button type='button' class='close' data-dismiss='alert'>&times;</button>
+    //   <h5 class='alert-heading'>Message</h5>$msg</div>";
+    if(!empty($msg)) {
+    	echo '<script>
+				swal({
+				  title: "Message",
+				  text: "'.$msg.'",
+				  icon: "success",
+				  button: "OK",
+				});
+				</script>'; }
+	if(!empty($err)) {
+		echo '<script>
+				swal({
+				  title: "Warning",
+				  text: "'.$err.'",
+				  icon: "danger",
+				  button: "OK",
+				});
+				</script>'; }
+
 }
 
 function connect_button($row_to_be_used) { ?>
